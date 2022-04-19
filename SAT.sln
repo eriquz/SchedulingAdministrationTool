@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAT.MVC.UI", "SAT.MVC.UI\SAT.MVC.UI.csproj", "{80CCB247-4FA4-4C71-BC3B-52E93FD23532}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAT.DATA.EF", "SAT.DATA.EF\SAT.DATA.EF.csproj", "{C8271F77-FFC8-45AC-8B77-A9A1A0E93C57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{80CCB247-4FA4-4C71-BC3B-52E93FD23532}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80CCB247-4FA4-4C71-BC3B-52E93FD23532}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80CCB247-4FA4-4C71-BC3B-52E93FD23532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8271F77-FFC8-45AC-8B77-A9A1A0E93C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8271F77-FFC8-45AC-8B77-A9A1A0E93C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8271F77-FFC8-45AC-8B77-A9A1A0E93C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8271F77-FFC8-45AC-8B77-A9A1A0E93C57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
