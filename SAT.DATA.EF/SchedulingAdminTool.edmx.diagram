@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4c2a6b800c7b40b2924db976f4fd3e58" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="SchedulingAdministrationToolModel.Cours" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchedulingAdministrationToolModel.Course" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SchedulingAdministrationToolModel.Enrollment" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SchedulingAdministrationToolModel.ScheduledClass" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SchedulingAdministrationToolModel.ScheduledClassStatus" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
