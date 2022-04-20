@@ -10,6 +10,7 @@ using SAT.DATA.EF;
 
 namespace SAT.MVC.UI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CoursesController : Controller
     {
         private SchedulingAdministrationToolEntities db = new SchedulingAdministrationToolEntities();
