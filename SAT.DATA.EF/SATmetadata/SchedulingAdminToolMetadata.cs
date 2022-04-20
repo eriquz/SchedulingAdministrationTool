@@ -172,7 +172,14 @@ namespace SAT.DATA.EF/*.SATmetadata*/
 
     }
     [MetadataType(typeof(StudentMetadata))]
-    public partial class Sutdent { }
+    public partial class Student {
+
+        [Display(Name="Full Name")]
+        public string FullName
+        {
+            get { return FirstName + " " + LastName; }
+        }
+    }
     #endregion
 
     #region StudentStatusMetadata
