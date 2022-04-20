@@ -1,4 +1,8 @@
-﻿    <!-- Banner Starts Here -->
+﻿@{ 
+    ViewBag.Title = "Home";
+}
+
+    @*<!-- Banner Starts Here -->
 <div class="main-banner header-text" id="top">
     <div class="Modern-Slider">
         <!-- Item -->
@@ -39,58 +43,41 @@
         <!-- // Item -->
     </div>
 </div>
-<!-- Banner Ends Here -->
-
-<div class="request-form">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <h4>Request a call back right now ?</h4>
-                <span>Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</span>
-            </div>
-            <div class="col-md-4">
-                <a href="contact.html" class="border-button">Contact Us</a>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Banner Ends Here -->*@
 
 <div class="services">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Financial <em>Services</em></h2>
-                    <span>Aliquam id urna imperdiet libero mollis hendrerit</span>
+                    <h2>Scheduling <em>Administration</em></h2>
+                    <span>A tool for managing the courses and enrollments for students.</span>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/service_01.jpg" alt="">
                     <div class="down-content">
-                        <h4>Digital Currency</h4>
-                        <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
-                        <a href="" class="filled-button">Read More</a>
+                        <h4>Students</h4>
+                        <p>Browse a paginated and filterable index of students.</p>
+                        <a href=@Url.Action("Index", "Students") class="filled-button">View Students</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/service_02.jpg" alt="">
                     <div class="down-content">
-                        <h4>Market Analysis</h4>
-                        <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
-                        <a href="" class="filled-button">Read More</a>
+                        <h4>Enrollments</h4>
+                        <p>Manage the enrollments and schedules of students.</p>
+                        <a href=@Url.Action("Index", "Enrollments") class="filled-button">Manage Enrollments</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="service-item">
-                    <img src="assets/images/service_03.jpg" alt="">
                     <div class="down-content">
-                        <h4>Historical Data</h4>
-                        <p>Sed tincidunt dictum lobortis. Aenean tempus diam vel augue luctus dignissim. Nunc ornare leo tortor.</p>
-                        <a href="" class="filled-button">Read More</a>
+                        <h4>Classes</h4>
+                        <p>View the available courses for this semester.</p>
+                        <a href=@Url.Action("Index", "ScheduledClasses") class="filled-button">View Scheduled Classes</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +85,21 @@
     </div>
 </div>
 
-<div class="fun-facts">
+<div class="request-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Need to contact us?</h4>
+                <span>You can fill out the form here:</span>
+            </div>
+            <div class="col-md-4">
+                <a href=@Url.Action("Contact", "Home") class="border-button">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="fun-facts">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -142,7 +143,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 
 @*<div class="more-info">
     <div class="container">

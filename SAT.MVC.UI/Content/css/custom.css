@@ -1,0 +1,63 @@
+﻿
+.sub-header {
+    height: auto;
+}
+
+@media (max-width: 768px){
+    .sub-header {
+        display: block;
+    }
+}
+
+.navbar .navbar-toggler {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar .navbar-toggler-icon:after {
+    color: #fff;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    height: 100%;
+    margin-top: 0;
+    align-self: center;
+}
+
+.navbar-brand h2 {
+    align-self: center;
+    height: 100%;
+}
+
+.nav-item {
+    display: flex;
+}
+
+.nav-link {
+    align-self: center;
+    border: none;
+    height: 100%;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active > .nav-link,
+.navbar .navbar-nav .nav-link.current,
+.navbar .navbar-nav .nav-link.show,
+.navbar .navbar-nav .show > .nav-link {
+    color: #a4c639;
+    border: none;
+}
+
+.banner {
+    height: 330px;/*Re-do height and centering of text*/
+    display: flex;
+    align-items: center;
+    background: #232323;
+    color: white;
+    justify-content: center;
+}
+
+.services {
+    margin: 2em;
+}

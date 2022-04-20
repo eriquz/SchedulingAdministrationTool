@@ -190,6 +190,7 @@
   <ItemGroup>
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\custom.css" />
     <Content Include="Content\css\flex-slider.css" />
     <Content Include="Content\css\fontawesome.css" />
     <Content Include="Content\css\owl.css" />
