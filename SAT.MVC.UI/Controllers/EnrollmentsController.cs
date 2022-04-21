@@ -40,8 +40,10 @@ namespace SAT.MVC.UI.Controllers
         // GET: Enrollments/Create
         public ActionResult Create()
         {
-            ViewBag.ScheduledClassID = new SelectList(db.ScheduledClasses, "ScheduledClassID", "InstructorName");
-            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "FirstName");
+            //Custom Prop allowing to pass the ScheduledClassID in rather the default(Instructor name) 
+            //We previosuly built out Term and FullName was able to implement the custom prop from the metadata
+            ViewBag.ScheduledClassID = new SelectList(db.ScheduledClasses, "ScheduledClassID","Term");
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "FullName");
             return View();
         }
 
@@ -76,8 +78,8 @@ namespace SAT.MVC.UI.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ScheduledClassID = new SelectList(db.ScheduledClasses, "ScheduledClassID", "InstructorName", enrollment.ScheduledClassID);
-            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "FirstName", enrollment.StudentID);
+            ViewBag.ScheduledClassID = new SelectList(db.ScheduledClasses, "ScheduledClassID", "Term", enrollment.ScheduledClassID);
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "FullName", enrollment.StudentID);
             return View(enrollment);
         }
 

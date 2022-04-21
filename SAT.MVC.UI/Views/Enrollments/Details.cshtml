@@ -4,11 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Enrollment</h4>
-    <hr />
+<div class="container pt-2">
+
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.EnrollmentDate)
@@ -19,24 +17,22 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ScheduledClass.InstructorName)
+            @Html.DisplayNameFor(model => model.ScheduledClass.Term)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ScheduledClass.InstructorName)
+            @Html.DisplayFor(model => model.ScheduledClass.Term)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Student.FirstName)
+            @Html.DisplayNameFor(model => model.Student.FullName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Student.FirstName)
+            @Html.DisplayFor(model => model.Student.FullName)
         </dd>
 
     </dl>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EnrollmentID }, new { @class = "btn btn-warning m-1" })
+    @Html.ActionLink("Back to Enrollments", "Index", null, new { @class = "btn btn-success m-2" })
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EnrollmentID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

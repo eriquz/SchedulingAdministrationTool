@@ -58,8 +58,9 @@ namespace SAT.DATA.EF/*.SATmetadata*/
 
         public int ScheduledClassID { get; set; }
 
+        [DataType(DataType.Date)]
         [Required(ErrorMessage = "*Enrollment Date is Required")]
-
+        [Display(Name = "Enrollment  Date")]
         public System.DateTime EnrollmentDate { get; set; }
     }
     [MetadataType(typeof(EnrollmentMetadata))]
