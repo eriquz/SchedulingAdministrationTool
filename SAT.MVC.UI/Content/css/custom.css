@@ -69,3 +69,12 @@
 tr.Course-False{
     background: grey;
 }
+
+
+
+.course-link {
+    color: #232323;
+}
+    .course-link:hover {
+        color: #a4c639;
+    }

@@ -100,7 +100,12 @@ namespace SAT.DATA.EF/*.SATmetadata*/
         public int SCSID { get; set; }
     }
     [MetadataType(typeof(ScheduledClassMetadata))]
-    public partial class ScheduledClass { }
+    public partial class ScheduledClass {
+        public string Term
+        {
+            get { return Course.CourseName + " - Begins " + StartDate.ToShortDateString() + " at " + Location; }
+        }
+    }
     #endregion
 
     #region ScheduledClassStatusMetadata
