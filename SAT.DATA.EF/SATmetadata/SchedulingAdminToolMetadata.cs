@@ -36,7 +36,7 @@ namespace SAT.DATA.EF/*.SATmetadata*/
         [StringLength(500, ErrorMessage = "*Must be 500 characters or less")]
         public string Notes { get; set; }
 
-        [Display(Name = "Active?")]
+        [Display(Name = "Active")]
         [Required(ErrorMessage = "*Is Active?")]
         public bool IsActive { get; set; }
     }
