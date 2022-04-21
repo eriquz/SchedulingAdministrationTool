@@ -1,17 +1,13 @@
 ﻿@model SAT.DATA.EF.StudentStatus
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Details - " + Model.SSName;
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>StudentStatus</h4>
-    <hr />
+<div class="container p-3">
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.SSName)
+            Status
         </dt>
 
         <dd>
@@ -19,7 +15,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SSDescription)
+            Description
         </dt>
 
         <dd>
@@ -27,8 +23,8 @@
         </dd>
 
     </dl>
+    <div class="d-flex justify-content-between">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.SSID }, new { @class = "btn btn-info my-2" })
+        @Html.ActionLink("Back to Statuses", "Index", null, new { @class = "btn btn-secondary my-2" })
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.SSID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

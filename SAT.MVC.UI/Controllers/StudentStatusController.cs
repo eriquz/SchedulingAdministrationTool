@@ -18,6 +18,7 @@ namespace SAT.MVC.UI.Controllers
         // GET: StudentStatus
         public ActionResult Index()
         {
+            ViewBag.ListOfSSIDsInUse = db.Students.Include(s => s.StudentStatus).Select(s => s.StudentStatus.SSID).ToList();
             return View(db.StudentStatuses.ToList());
         }
 
