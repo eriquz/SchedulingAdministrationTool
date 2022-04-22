@@ -15,12 +15,15 @@
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="~/Content/css/fontawesome.css">
+    @*<link rel="stylesheet" href="~/Content/css/fontawesome.css">
     <link rel="stylesheet" href="~/Content/css/templatemo-finance-business.css">
-    <link rel="stylesheet" href="~/Content/css/owl.css">
+    <link rel="stylesheet" href="~/Content/css/owl.css">*@
+
+    @Styles.Render("~/Content/css")
+
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/Content/css/custom.css"/>
+    <link rel="stylesheet" href="~/Content/css/custom.css" />
 
     <!--
 
@@ -136,9 +139,11 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="~/Scripts/jquery/jquery.min.js"></script>
-    <script src="~/Scripts/js/bootstrap.bundle.min.js"></script>
+    @*<script src="~/Scripts/jquery/jquery.min.js"></script>
+    <script src="~/Scripts/js/bootstrap.bundle.min.js"></script>*@
 
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
     <!-- Additional Scripts -->
     <script src="~/Scripts/js/custom.js"></script>
     <script src="~/Scripts/js/owl.js"></script>
