@@ -8,11 +8,12 @@
     @if (User.IsInRole("Admin"))
     {
         <div class="p-3">
-            @Html.ActionLink("Create New Student", "Create", null, new { @class = "filled-button" })
+            @Html.ActionLink("Add New Student", "Create", null, new { @class = "filled-button" })
         </div>
     }
     <table class="table">
         <tr>
+            <th></th>
             <th>
                 @Html.DisplayNameFor(model => model.FullName)
             </th>
@@ -52,6 +53,9 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    <img src="~/Content/images/students/t_@item.PhotoURL" alt="@item.FirstName" title="@item.LastName" class="img-fluid"/>
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.FullName)
                 </td>

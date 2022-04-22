@@ -212,6 +212,7 @@
     <Content Include="Content\images\slide_01.jpg" />
     <Content Include="Content\images\slide_02.jpg" />
     <Content Include="Content\images\slide_03.jpg" />
+    <Content Include="Content\images\students\placeholder.JPG" />
     <Content Include="Content\images\team_01.jpg" />
     <Content Include="Content\images\team_02.jpg" />
     <Content Include="Content\images\team_03.jpg" />

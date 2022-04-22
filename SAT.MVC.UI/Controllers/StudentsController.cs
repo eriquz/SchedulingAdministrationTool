@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -53,15 +54,40 @@ namespace SAT.MVC.UI.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public ActionResult Create([Bind(Include = "StudentID,FirstName,LastName,Major,Address,City,State,ZipCode,Phone,Email,PhotoURL,SSID")] Student student)
+        public ActionResult Create([Bind(Include = "StudentID,FirstName,LastName,Major,Address,City,State,ZipCode,Phone,Email,PhotoURL,SSID")] Student student, HttpPostedFileBase PhotoURL)
         {
             if (ModelState.IsValid)
             {
+
+                #region File Upload
+
+                string file = "placeholder.jpg";
+
+                if (PhotoURL != null)
+                {
+                    file = PhotoURL.FileName;
+                    string extension = file.Substring(file.LastIndexOf("."));
+                    string[] goodextension = { ".jpeg", ".jpg", ".png", ".gif" };
+                    if (goodextension.Contains(extension.ToLower()) && PhotoURL.ContentLength <= 4194304)
+                    {
+                        file = Guid.NewGuid() + extension;
+                        string savePath = Server.MapPath("~/Content/images/students/");
+                        Image ConvertedImage = Image.FromStream(PhotoURL.InputStream);
+                        int maxImageSize = 500;
+                        int maxThumbSize = 100;
+                        ImageUtility.ResizeImage(savePath, file, ConvertedImage, maxImageSize, maxThumbSize);
+                    }
+
+                    student.PhotoURL = file;
+
+                }
+
+                #endregion
+
                 db.Students.Add(student);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             ViewBag.SSID = new SelectList(db.StudentStatuses, "SSID", "SSName", student.SSID);
             return View(student);
         }
@@ -89,10 +115,46 @@ namespace SAT.MVC.UI.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public ActionResult Edit([Bind(Include = "StudentID,FirstName,LastName,Major,Address,City,State,ZipCode,Phone,Email,PhotoURL,SSID")] Student student)
+        public ActionResult Edit([Bind(Include = "StudentID,FirstName,LastName,Major,Address,City,State,ZipCode,Phone,Email,PhotoURL,SSID")] Student student, HttpPostedFileBase PhotoURL)
         {
             if (ModelState.IsValid)
             {
+                #region File Upload
+
+                string file = student.PhotoURL;
+
+                if (PhotoURL != null)
+                {
+                    file = PhotoURL.FileName;
+
+                    string extension = file.Substring(file.LastIndexOf("."));
+                    string[] goodextension = { ".jpeg", ".jpg", ".png", ".gif" };
+                    if (goodextension.Contains(extension.ToLower()) && PhotoURL.ContentLength <= 4194304)
+                    {
+                        file = Guid.NewGuid() + extension;
+
+                        #region Resizing
+
+                        string savePath = Server.MapPath("~/Content/images/students/");
+                        Image ConvertedImage = Image.FromStream(PhotoURL.InputStream);
+                        int maxImageSize = 500;
+                        int maxThumbSize = 100;
+                        ImageUtility.ResizeImage(savePath, file, ConvertedImage, maxImageSize, maxThumbSize);
+
+                        #endregion
+
+                        if (student.PhotoURL != null && student.PhotoURL != "placeholder.jpg")
+                        {
+                            string path = Server.MapPath("~/Content/images/students/");
+                            ImageUtility.Delete(path, student.PhotoURL);
+                        }
+
+                        student.PhotoURL = file;
+
+                    }
+                }
+                #endregion
+
                 db.Entry(student).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
