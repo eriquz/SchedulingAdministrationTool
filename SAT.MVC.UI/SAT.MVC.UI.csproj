@@ -202,6 +202,7 @@
     <Content Include="Content\images\fun-facts-bg.jpg" />
     <Content Include="Content\images\more-info.jpg" />
     <Content Include="Content\images\page-heading-bg.jpg" />
+    <Content Include="Content\images\sat-banner.jpg" />
     <Content Include="Content\images\service_01.jpg" />
     <Content Include="Content\images\service_02.jpg" />
     <Content Include="Content\images\service_03.jpg" />
