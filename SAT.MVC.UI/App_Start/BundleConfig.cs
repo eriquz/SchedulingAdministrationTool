@@ -33,7 +33,8 @@ namespace SAT.MVC.UI
                       "~/Content/css/templatemo-finance-business.css",
                       "~/Content/DataTables/css/dataTables.jqueryui.min.css",
                       "~/Content/css/owl.css",
-                      "~/Content/DataTables/css/dataTables.jqueryui.min.css"));//Datatables
+                      "~/Content/DataTables/css/dataTables.jqueryui.min.css",//Datatables
+                      "~/Content/css/custom.css"));
         }
     }
 }
