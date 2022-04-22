@@ -1,12 +1,17 @@
-﻿
-.sub-header {
+﻿.sub-header {
     height: auto;
+    background-color: #232323;
+    color: #fff;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .sub-header {
         display: block;
     }
+}
+
+header {
+    background-color: rgba(23, 23, 23, 0.4) !important;
 }
 
 .navbar .navbar-toggler {
@@ -22,7 +27,7 @@
     display: flex;
     height: 100%;
     margin-top: 0;
-    align-self: center;
+    align-self: flex-start;
 }
 
 .navbar-brand h2 {
@@ -50,23 +55,75 @@
 }
 
 .banner {
-    height: 330px;/*Re-do height and centering of text*/
-    display: flex;
-    align-items: center;
-    background: #232323;
+    text-align: center;
+    height: 330px; /*Re-do height and centering of text*/
+    width: 100%;
     color: white;
-    justify-content: center;
+    position: relative;
+    background: url(../images/sat-banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+    .banner h4 {
+        position: absolute;
+        top: 165px;
+        left: 10%;
+        width: 80%;
+    }
+
+@media (max-width: 991px) {
+    .banner {
+        background: #a4c639;
+    }
+
+        .banner h4 {
+            top: 180px;
+        }
+
+    header {
+        background-color: rgba(23, 23, 23, 0.8) !important;
+    }
+
+    .navbar .navbar-brand {
+        padding-top: 15px;
+    }
+}
+
+.bodyWrapper {
+    min-height: calc(100vh - 330px);
+    position: relative;
+    max-width: 1280px;
+    margin: auto;
 }
 
 .services {
     margin: 2em;
+    padding-top: 1.5em;
 }
 
+@media (min-width: 767px) {
+    .service-item {
+        min-height: 315px;
+        background-color: #f7f7f7;
+    }
+}
 
-/*<<<<<<<<<<<<<<<<<<<<<--<LOGIn-->>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.request-form {
+    width: 66%;
+    margin: auto;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
+table img {
+    min-width: 99px;
+}
 
-tr.Course-False{
+tr.Course-False {
     background: grey;
 }
 
@@ -75,6 +132,7 @@ tr.Course-False{
 .course-link {
     color: #232323;
 }
+
     .course-link:hover {
         color: #a4c639;
     }

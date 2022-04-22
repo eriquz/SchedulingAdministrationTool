@@ -359,6 +359,7 @@
     <Content Include="Content\images\fun-facts-bg.jpg" />
     <Content Include="Content\images\more-info.jpg" />
     <Content Include="Content\images\page-heading-bg.jpg" />
+    <Content Include="Content\images\sat-banner.jpg" />
     <Content Include="Content\images\service_01.jpg" />
     <Content Include="Content\images\service_02.jpg" />
     <Content Include="Content\images\service_03.jpg" />
@@ -604,6 +605,7 @@
     <Content Include="Content\DataTables\css\semanticui.scss" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="Content\SAT-Documentation.pdf" />
     <None Include="packages.config" />
     <Content Include="Scripts\js\bootstrap.bundle.js.map" />
     <Content Include="Scripts\js\bootstrap.bundle.min.js.map" />
