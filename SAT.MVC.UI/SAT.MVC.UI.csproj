@@ -369,6 +369,7 @@
     <Content Include="fonts\slick.ttf" />
     <Content Include="fonts\slick.woff" />
     <Content Include="configs\AppSecretKeys.config" />
+    <Content Include="Content\SAT-Documentation.pdf" />
     <None Include="packages.config" />
     <Content Include="Scripts\js\bootstrap.bundle.js.map" />
     <Content Include="Scripts\js\bootstrap.bundle.min.js.map" />
